@@ -25,7 +25,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - cat no_such_file.txt
+      - name: fail command
+        run: cat no_such_file.txt
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
